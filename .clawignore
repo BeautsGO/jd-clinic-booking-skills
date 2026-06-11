@@ -1,0 +1,8 @@
+node_modules/
+.git/
+.github/
+scripts/
+test.js
+*.zip
+.DS_Store
+.DS_Store

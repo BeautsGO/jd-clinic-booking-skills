@@ -1,53 +1,52 @@
-# JD皮肤科预约技能 (jd-clinic-booking-skills)
+# jd-clinic-booking-skills
 
-> 韩国首尔江南区 JD皮肤科（JD Clinic）独立预约助手
+> 韩国热门皮肤科/医美医院独立预约技能合集
 
-## 功能
+## 收录医院
 
-| 功能 | 说明 |
-|------|------|
-| 📖 预约指南 | 查看 JD皮肤科 的详细预约流程（iOS/Android/微信/网页） |
-| 🔗 打开链接 | 打开医院 BeautsGO 详情页 |
-| ⚡ 帮我预约 | 收集信息 → 自动提交预约 API |
-| 💬 咨询客服 | 打开在线客服对话页面 |
-| 💰 查价格 | 查询项目价格（API 优先 → 打开价格表页） |
-| 📲 下载APP | BeautsGO App 下载链接 |
-
-## 使用方式
-
-作为 AI 技能加载后，用户可以说：
-
-- 「JD皮肤科怎么预约」— 查看预约指南
-- 「帮我预约」— 开始预约流程
-- 「2人，3月26日下午」— 填写预约信息
-- 「查价格」— 查看项目价格
-- 「Onda 价格」— 查询具体项目价格
-- 「咨询客服」— 打开在线客服
-- 「打开链接」— 打开医院详情页
-- 「下载APP」— 获取下载链接
+| 医院 | 技能名 | 位置 |
+|------|--------|------|
+| 🏥 JD皮肤科 | `jd-booking` | 首尔江南 |
+| 🏥 明洞丹雅皮肤科 (DAN-A) | `dana-booking` | 首尔明洞 |
+| 🏥 鹿美人皮肤科 (Lumiin) | `deer-booking` | 首尔江南 |
+| 🏥 济州岛with医院 | `jeju-with-booking` | 济州岛 |
+| 🏥 Barog医院（江南店） | `barog-booking` | 首尔江南 |
+| 🏥 梅宗德医院 (maisondeM) | `maejongdeok-booking` | 首尔瑞草 |
+| 🏥 reberry医院 明洞店 | `reberry-booking` | 首尔明洞 |
+| 🏥 明洞优美皮肤科 (UMI) | `umi-booking` | 首尔明洞 |
 
 ## 项目结构
 
 ```
-jd-booking/
-├── api/
-│   ├── skill.js              ← 主入口
-│   └── browser/
-│       └── open-url.js       ← 安全打开浏览器
-├── core/
-│   ├── preprocessor.js       ← 意图识别 & 表单解析
-│   ├── renderer.js           ← 模板渲染引擎
-│   └── service.js            ← 服务编排
-├── data/
-│   └── hospital.json         ← JD皮肤科 数据
-├── i18n/
-│   ├── zh.json               ← 中文文案
-│   └── en.json               ← 英文文案
-├── templates/
-│   └── booking.tpl           ← 预约指南模板
-├── skills/                   ← 子技能目录（预留）
-├── skill.json                ← ClawHub 技能元数据
-├── package.json
+jd-clinic-booking-skills/
+├── shared/                    ← 共享核心代码（所有医院通用）
+│   ├── api/skill.js           ← 主入口逻辑
+│   ├── api/browser/open-url.js
+│   ├── core/preprocessor.js   ← 意图检测+表单解析
+│   ├── core/renderer.js       ← 模板渲染引擎
+│   ├── templates/booking.tpl
+│   └── i18n/
+├── hospitals/                 ← 医院配置数据
+│   ├── jd/                    ← 每家医院独立配置
+│   ├── dana/
+│   └── ...
+├── scripts/
+│   └── generate-all.js        ← 一键生成所有技能
+├── publish/                   ← 生成的独立技能（可直接发布）
+│   ├── jd/
+│   ├── dana/
+│   └── ...
 └── README.md
 ```
 
+## 生成技能
+
+```bash
+node scripts/generate-all.js
+```
+
+## 发布到 ClawHub
+
+```bash
+cd publish/{slug} && claw skill publish
+```

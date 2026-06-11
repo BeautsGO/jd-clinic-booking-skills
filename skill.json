@@ -1,6 +1,6 @@
 {
-  "name": "jd-booking",
-  "title": "JD皮肤科预约 JD Clinic Booking",
+  "name": "jd-clinic-booking-skills",
+  "title": "JD皮肤科预约 JD Clinic Booking Skills",
   "version": "1.0.0",
   "tags": [
     "JD皮肤科",
@@ -18,9 +18,11 @@
     "dermatology",
     "Seoul",
     "Gangnam",
-    "booking"
+    "jd-clinic",
+    "booking-skills",
+    "JD Clinic预约"
   ],
-  "description": "JD皮肤科（JD Clinic）独立预约助手 — 韩国首尔江南区人气皮肤科。支持查看预约流程、一键预约、在线咨询、价格查询。JD皮肤科以水光针、皮肤管理、玻尿酸等项目闻名，位于首尔江南区新沙洞。通过 BeautsGO 平台完成预约。",
+  "description": "JD皮肤科+更多医院独立预约技能合集 — 韩国首尔人气皮肤科预约助手",
   "permissions": {
     "network": [
       "https://api.yestokr.com/api/Appointment/saveFromSkill",
@@ -67,7 +69,9 @@
         "description": "多轮对话上下文（可选），用于跨轮保持状态"
       }
     },
-    "required": ["query"]
+    "required": [
+      "query"
+    ]
   },
   "output": {
     "type": "string",

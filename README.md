@@ -1,4 +1,4 @@
-# JD皮肤科预约技能 (jd-booking)
+# JD皮肤科预约技能 (jd-clinic-booking-skills)
 
 > 韩国首尔江南区 JD皮肤科（JD Clinic）独立预约助手
 
@@ -53,9 +53,9 @@ jd-booking/
 
 ## 与 beautsgo-booking 的区别
 
-| 维度 | beautsgo-booking | jd-booking |
+| 维度 | beautsgo-booking | jd-clinic-booking-skills |
 |------|-----------------|------------|
-| 覆盖医院 | 1300+ 家 | 仅 JD皮肤科 1家 |
+| 覆盖医院 | 1300+ 家 | 仅 JD皮肤科 1家（后续可扩展） |
 | 医院匹配 | 5 维模糊匹配 | 无需匹配，直连 |
 | 代码量 | 970 行 | ~350 行 |
 | 复杂度 | 高 | 低（精简专用） |

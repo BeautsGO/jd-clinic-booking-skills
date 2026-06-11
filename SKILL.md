@@ -1,6 +1,6 @@
 ---
-name: jd-booking
-title: JD皮肤科预约 JD Clinic Booking
+name: jd-clinic-booking-skills
+title: JD皮肤科预约 JD Clinic Booking Skills
 entry: api/skill.js
 version: 1.0.0
 tags:
@@ -13,7 +13,7 @@ tags:
   - 预约
   - 医美
   - booking
-description: "JD皮肤科独立预约助手 — 查看预约指南、一键预约、在线咨询、价格查询。位于首尔江南区新沙洞，以水光针/皮肤管理/玻尿酸闻名。"
+description: "JD皮肤科+更多医院独立预约技能合集 — 查看预约指南、一键预约、在线咨询、价格查询。位于首尔江南区新沙洞，以水光针/皮肤管理/玻尿酸闻名。"
 ---
 
 # JD皮肤科预约助手
